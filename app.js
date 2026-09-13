@@ -33,4 +33,7 @@ function addCart(name){cart.push(name);document.getElementById("cartCount").text
 function fav(btn){btn.textContent=btn.textContent==="♡"?"♥":"♡"}
 function showToast(t){toast.textContent=t;toast.classList.add("show");setTimeout(()=>toast.classList.remove("show"),1800)}
 function showFree(){showToast("Тут будуть твої перші безкоштовні матеріали 💜")}
+function openCart(){
+  document.getElementById("cartModal").classList.add("show");
+}
 render();
