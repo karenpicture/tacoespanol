@@ -1037,3 +1037,31 @@ video{
   font-size:15px;
   cursor:pointer;
 }
+.cart-item{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:15px;
+  padding:14px 0;
+  border-bottom:1px solid var(--line);
+  font-size:15px;
+  font-weight:600;
+}
+
+.cart-item span{
+  flex:1;
+  line-height:1.35;
+}
+
+.cart-item button{
+  flex:0 0 32px;
+  width:32px;
+  height:32px;
+  border:0;
+  border-radius:50%;
+  background:var(--lav);
+  color:var(--purple);
+  font-size:20px;
+  line-height:1;
+  cursor:pointer;
+}
