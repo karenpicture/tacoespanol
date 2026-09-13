@@ -29,7 +29,7 @@ function render(){
 document.querySelectorAll(".filter").forEach(b=>b.addEventListener("click",()=>{
  document.querySelectorAll(".filter").forEach(x=>x.classList.remove("active"));b.classList.add("active");current=b.dataset.filter;render();
 }));
-function addCart(name){cart.push(name);document.getElementById("cartCount").textContent=cart.length;showToast(`«${name}» додано до кошика`)}
+function addCart(name){cart.push(name);document.getElementById("cartCount").textContent=cart.length;renderCart();showToast(`«${name}» додано до кошика`)}
 function fav(btn){btn.textContent=btn.textContent==="♡"?"♥":"♡"}
 function showToast(t){toast.textContent=t;toast.classList.add("show");setTimeout(()=>toast.classList.remove("show"),1800)}
 function showFree(){showToast("Тут будуть твої перші безкоштовні матеріали 💜")}
@@ -38,5 +38,37 @@ function openCart(){
 }
 function closeCart(){
   document.getElementById("cartModal").classList.remove("show");
+}
+function renderCart(){
+  const items=document.getElementById("cartItems");
+  const empty=document.getElementById("cartEmpty");
+
+  if(cart.length===0){
+    items.innerHTML="";
+    empty.style.display="block";
+    document.getElementById("cartTotal").textContent="$0.00";
+    return;
+  }
+
+  empty.style.display="none";
+
+  items.innerHTML=cart.map((name,i)=>`
+    <div class="cart-item">
+      <span>${name}</span>
+      <button onclick="removeCart(${i})">×</button>
+    </div>
+  `).join("");
+
+  const total=cart.reduce((sum,name)=>{
+    const material=materials.find(m=>m.title===name);
+    return sum+(material?material.price:0);
+  },0);
+
+  document.getElementById("cartTotal").textContent=`$${total.toFixed(2)}`;
+}
+function removeCart(i){
+  cart.splice(i,1);
+  document.getElementById("cartCount").textContent=cart.length;
+  renderCart();
 }
 render();
