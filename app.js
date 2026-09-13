@@ -39,6 +39,10 @@ function openCart(){
 function closeCart(){
   document.getElementById("cartModal").classList.remove("show");
 }
+function openCheckout(){
+  document.getElementById("checkoutModal").classList.add("show");
+  renderCheckout();
+}
 function renderCart(){
   const items=document.getElementById("cartItems");
   const empty=document.getElementById("cartEmpty");
