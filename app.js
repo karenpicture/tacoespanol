@@ -74,6 +74,26 @@ function renderCart(){
 
   document.getElementById("cartTotal").textContent=`$${total.toFixed(2)}`;
 }
+function renderCheckout(){
+  const items=document.getElementById("checkoutItems");
+
+  items.innerHTML=cart.map(name=>{
+    const material=materials.find(m=>m.title===name);
+    return `
+      <div class="checkout-item">
+        <span>${name}</span>
+        <strong>$${material.price.toFixed(2)}</strong>
+      </div>
+    `;
+  }).join("");
+
+  const total=cart.reduce((sum,name)=>{
+    const material=materials.find(m=>m.title===name);
+    return sum+(material?material.price:0);
+  },0);
+
+  document.getElementById("checkoutTotal").textContent=`$${total.toFixed(2)}`;
+}
 function removeCart(i){
   cart.splice(i,1);
   document.getElementById("cartCount").textContent=cart.length;
