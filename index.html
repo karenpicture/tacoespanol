@@ -106,7 +106,44 @@
     </button>
   </div>
 </div>
+<div class="checkout-modal" id="checkoutModal">
+  <div class="checkout-overlay" onclick="closeCheckout()"></div>
 
+  <div class="checkout-panel">
+    <button class="checkout-close" onclick="closeCheckout()">×</button>
+
+    <span class="mini-label">TACOESPAÑOL</span>
+    <h2>Оформлення замовлення</h2>
+
+    <p class="checkout-note">
+      Залиш свої дані — і ми підготуємо матеріали для тебе 💜
+    </p>
+
+    <label>
+      Ім'я
+      <input type="text" id="checkoutName" placeholder="Твоє ім'я">
+    </label>
+
+    <label>
+      Email
+      <input type="email" id="checkoutEmail" placeholder="you@example.com">
+    </label>
+
+    <div class="checkout-summary">
+      <h3>Твої матеріали</h3>
+      <div id="checkoutItems"></div>
+
+      <div class="checkout-total">
+        <span>Разом:</span>
+        <strong id="checkoutTotal">$0.00</strong>
+      </div>
+    </div>
+
+    <button class="checkout-submit" onclick="submitCheckout()">
+      Перейти до оплати →
+    </button>
+  </div>
+</div>
 <script src="app.js"></script>
 </body>
 </html>
