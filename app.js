@@ -39,6 +39,9 @@ function openCart(){
 function closeCart(){
   document.getElementById("cartModal").classList.remove("show");
 }
+function closeCheckout(){
+  document.getElementById("checkoutModal").classList.remove("show");
+}
 function openCheckout(){
   document.getElementById("checkoutModal").classList.add("show");
   renderCheckout();
