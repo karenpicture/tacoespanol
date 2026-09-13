@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap');
+:root{--purple:#4d16a8;--purple2:#7433c7;--green:#16a15f;--navy:#142746;--aqua:#e9fbfb;--mint:#c8f5de;--lav:#e4d8ff;--white:#fff;--line:#dfeaf0}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--aqua);color:var(--navy);font-family:"DM Sans",Arial,sans-serif}.container{width:min(1180px,calc(100% - 64px));margin:auto}
+.site-header{height:82px;background:rgba(239,253,254,.92);backdrop-filter:blur(12px);position:sticky;top:0;z-index:20}.nav{height:100%;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{display:flex;align-items:center;gap:10px;min-width:340px}.brand-taco{width:95px;height:78px;object-fit:cover;object-position:center;mix-blend-mode:multiply}.brand-name{font-family:Georgia,serif;font-size:35px;line-height:.9;color:var(--purple);white-space:nowrap}.brand-name strong{color:var(--green);font-weight:700}.brand-name small{display:block;font:600 8px "DM Sans",sans-serif;letter-spacing:.22em;color:var(--navy);margin-top:10px}
+.desktop-nav{display:flex;gap:25px;align-items:center;font-size:14px}.desktop-nav a{padding:30px 0 8px;border-bottom:0;text-decoration:none}.desktop-nav a.active{color:var(--purple);font-weight:700;border-bottom:3px solid var(--purple)}.actions{display:flex;align-items:center;gap:11px}.actions .icon-btn:first-child{font-size:34px;line-height:1;transform:translateY(-1px)}.icon-btn{border:0;background:none;color:var(--navy);font-size:27px;cursor:pointer;position:relative}.cart-btn{font-size:20px}.cart-btn span{position:absolute;right:-6px;top:-7px;background:var(--green);color:white;width:18px;height:18px;border-radius:50%;font-size:10px;display:grid;place-items:center}.login{border:0;background:#c8a4ff;color:#351080;border-radius:28px;padding:14px 23px;font-weight:700;cursor:pointer}
+.hero{position:relative;overflow:hidden;padding:76px 0 58px;min-height:535px}.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;align-items:center;min-height:430px}.kicker{font-size:11px;letter-spacing:.27em;font-weight:700;color:var(--green);margin-bottom:13px}.hero h1{font:700 clamp(62px,7vw,92px)/.9 "Playfair Display",Georgia,serif;letter-spacing:-.055em;margin:0;color:var(--purple)}.hero h1 em{font-style:normal;color:var(--green)}.hero-copy>p{font-size:20px;line-height:1.35;margin:25px 0 28px}.hero-buttons{display:flex;gap:18px}.btn{display:inline-flex;align-items:center;justify-content:center;border:0;border-radius:28px;padding:15px 27px;font-weight:700;font-size:15px;cursor:pointer;text-decoration:none}.btn.primary{background:var(--purple);color:white;min-width:275px}.btn.primary span{margin-left:10px;font-size:22px}.btn.secondary{background:var(--mint);color:var(--navy);min-width:220px}.hero-art{height:420px;position:relative}.taco-bg{position:absolute;inset:35px 10px 10px 15px;background:var(--lav);border-radius:45% 55% 48% 52% / 40% 42% 58% 60%;transform:rotate(-2deg)}.hero-taco{position:absolute;width:590px;height:445px;object-fit:cover;object-position:center;right:-50px;top:-3px;mix-blend-mode:multiply;filter:drop-shadow(0 18px 12px rgba(20,39,70,.12))}
+.blob{position:absolute;border-radius:50%;filter:blur(.2px);pointer-events:none}.blob-purple{width:150px;height:150px;background:#d5baff;left:-75px;top:-55px}.blob-mint{width:190px;height:190px;background:#b9f1d7;right:-95px;top:-75px}
+.filters-wrap{position:relative;z-index:5}.filters{background:rgba(255,255,255,.92);border-radius:20px;padding:12px;display:flex;gap:9px;align-items:center;box-shadow:0 7px 25px rgba(20,39,70,.06)}.filters i{height:34px;width:1px;background:#d7e1e7;margin:0 14px}.filter{border:0;background:#eaf8fa;color:var(--navy);border-radius:24px;padding:12px 18px;font-weight:600;cursor:pointer;white-space:nowrap}.filter.active{background:#aa72ee;color:#fff}.filter.topic{background:white;padding-left:13px;padding-right:13px}
+.popular{padding:35px 0 75px}.section-title{display:flex;align-items:center;justify-content:space-between;margin-bottom:20px}.section-title h2,.free-box h2,.about h2{font:700 34px/1.05 "Playfair Display",Georgia,serif;margin:0;color:var(--navy)}.section-title a{color:var(--purple);font-weight:700}.products{display:grid;grid-template-columns:repeat(5,1fr);gap:15px}.product{background:white;border-radius:16px;overflow:hidden;box-shadow:0 7px 20px rgba(20,39,70,.08);display:flex;flex-direction:column}.product-cover{height:165px;position:relative;background:#eee;overflow:hidden}.product-cover img{width:100%;height:100%;object-fit:cover}.heart{position:absolute;right:10px;top:10px;width:34px;height:34px;border:0;border-radius:50%;background:white;color:var(--navy);font-size:21px;cursor:pointer}.product-body{padding:12px 13px 14px;display:flex;flex-direction:column;flex:1}.product h3{font-size:14px;margin:0 0 8px;line-height:1.25}.tags{display:flex;gap:6px;flex-wrap:wrap}.tag{background:var(--mint);color:#126b45;border-radius:12px;padding:4px 9px;font-size:10px;font-weight:700}.tag.topic{background:var(--lav);color:var(--purple)}.product-foot{margin-top:auto}.price{font-size:17px;font-weight:800;margin:12px 0 9px}.add{width:100%;border:0;border-radius:18px;background:#ddc8ff;color:var(--purple);font-weight:700;padding:9px;cursor:pointer}.add:hover{background:#cdb0ff}
+.free-section{padding:0 0 70px}.free-box{background:var(--lav);border-radius:25px;padding:35px 45px;display:flex;align-items:center;justify-content:space-between;gap:30px}.mini-label{font-size:10px;letter-spacing:.22em;font-weight:800;color:var(--green)}.free-box p,.about p{color:#56667c;line-height:1.6;max-width:600px}.about{background:var(--navy);color:white;padding:75px 0}.about h2{color:white;margin-top:10px}.about p{color:#c8d1dc;font-size:17px}
+.toast{position:fixed;bottom:25px;left:50%;transform:translate(-50%,20px);background:var(--navy);color:white;padding:13px 20px;border-radius:12px;opacity:0;pointer-events:none;transition:.25s;z-index:50}.toast.show{opacity:1;transform:translate(-50%,0)}
+@media(max-width:1050px){.desktop-nav{display:none}.brand{min-width:0}.products{grid-template-columns:repeat(3,1fr)}.hero-taco{width:500px;right:-50px}.hero-grid{grid-template-columns:1fr 1fr}.filters{overflow-x:auto}.filters i{display:none}}
+@media(max-width:700px){.container{width:min(100% - 28px,1180px)}.site-header{height:68px}.brand-name{font-size:25px}.brand-taco{width:66px;height:58px}.brand-name small{font-size:6px;margin-top:6px}.actions .icon-btn:nth-child(-n+2){display:none}.login{padding:10px 14px;font-size:12px}.hero{padding:45px 0 30px}.hero-grid{grid-template-columns:1fr}.hero-art{height:310px;margin-top:10px}.hero-taco{width:430px;height:330px;right:50%;transform:translateX(50%);top:0}.hero h1{font-size:58px}.hero-copy>p{font-size:17px}.hero-buttons{flex-direction:column;align-items:stretch}.btn.primary,.btn.secondary{width:100%}.filters{border-radius:15px}.products{grid-template-columns:1fr 1fr}.free-box{flex-direction:column;align-items:flex-start;padding:28px}.section-title h2{font-size:28px}}
+@media(max-width:430px){.products{grid-template-columns:1fr}.product-cover{height:200px}}
+
+
+/* Keep navigation labels clean */
+.desktop-nav a,
+.desktop-nav a:hover,
+.desktop-nav a:focus,
+.desktop-nav a:visited{text-decoration:none}
+.desktop-nav a.active{text-decoration:none;border-bottom:0}
+/* Search and heart from the approved icon reference */
+.actions .icon-btn:first-child,
+.actions .icon-btn:nth-child(2){
+  width:36px;height:36px;padding:0;font-size:0;line-height:0;
+  display:grid;place-items:center;
+  background-repeat:no-repeat;background-position:center;background-size:29px 29px;
+  transform:none;
+}
+.actions .icon-btn:first-child{background-image:url("assets/search-reference.png")}
+.actions .icon-btn:nth-child(2){background-image:url("assets/heart-reference.png")}
+
+@media(max-width:1050px){
+  .brand{width:300px;min-width:300px}
+}
+@media(max-width:700px){
+  .brand{width:220px;min-width:220px;height:58px}
+}
+
+/* Approved header logo — sized like the latest reference */
+.brand-taco{display:none!important}
+.brand-name{display:none!important}
+.brand{
+  width:390px;
+  min-width:390px;
+  height:76px;
+  display:flex;
+  align-items:center;
+  background:url("assets/tacoespanol-logo-cropped.png") left center/contain no-repeat;
+}

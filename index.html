@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TacoEspañol — матеріали для вивчення іспанської</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="#">
+        <img src="assets/taco-mascot.png" alt="TacoEspañol taco" class="brand-taco">
+        <span class="brand-name"><b>Taco</b><strong>Español</strong><small>MATERIALES PARA APRENDER ESPAÑOL</small></span>
+      </a>
+      <nav class="desktop-nav">
+        <a class="active" href="#">Головна</a><a href="#shop">Магазин</a><a href="#free">Безкоштовні матеріали</a><a href="#about">Про мене</a><a href="#contact">Контакти</a>
+      </nav>
+      <div class="actions">
+        <button aria-label="Buscar" class="icon-btn">⌕</button>
+        <button aria-label="Favoritos" class="icon-btn">♡</button>
+        <button aria-label="Carrito" class="icon-btn cart-btn">🛒<span id="cartCount">0</span></button>
+        <button class="login">Увійти</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="blob blob-purple"></div><div class="blob blob-mint"></div>
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <div class="kicker">ВИВЧАЙ · ДОСЛІДЖУЙ · ГОВОРИ · НАСОЛОДЖУЙСЯ</div>
+          <h1>Іспанська<br><em>по-твоєму</em></h1>
+          <p>Практичні, красиві та ефективні матеріали<br>для студентів і викладачів іспанської.</p>
+          <div class="hero-buttons">
+            <a class="btn primary" href="#shop">Переглянути матеріали <span>→</span></a>
+            <a class="btn secondary" href="#free">Безкоштовні матеріали</a>
+          </div>
+        </div>
+        <div class="hero-art">
+          <div class="taco-bg"></div>
+          <img src="assets/taco-mascot.png" alt="Taco sonriente" class="hero-taco">
+        </div>
+      </div>
+    </section>
+
+    <section class="filters-wrap" id="shop">
+      <div class="container">
+        <div class="filters">
+          <button class="filter active" data-filter="all">Усі</button>
+          <button class="filter" data-filter="A1">A1</button><button class="filter" data-filter="A2">A2</button>
+          <button class="filter" data-filter="B1">B1</button><button class="filter" data-filter="B2">B2</button>
+          <i></i>
+          <button class="filter topic" data-filter="Граматика">▤ &nbsp; Граматика</button>
+          <button class="filter topic" data-filter="Лексика">◌ &nbsp; Лексика</button>
+          <button class="filter topic" data-filter="Говоріння">♧ &nbsp; Говоріння</button>
+          <button class="filter topic" data-filter="Подорожі">✈ &nbsp; Подорожі</button>
+          <button class="filter topic" data-filter="Ще">••• &nbsp; Ще</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="popular">
+      <div class="container">
+        <div class="section-title"><h2>Популярні матеріали</h2><a href="#shop">Переглянути все →</a></div>
+        <div class="products" id="products"></div>
+      </div>
+    </section>
+
+    <section class="free-section" id="free">
+      <div class="container free-box">
+        <div><span class="mini-label">ДЛЯ ПОЧАТКУ</span><h2>Спробуй щось безкоштовно 💜</h2><p>Завантажуй безкоштовні матеріали та знайомся зі стилем TacoEspañol перед покупкою.</p></div>
+        <button class="btn secondary" onclick="showFree()">Переглянути безкоштовні матеріали →</button>
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <div class="container"><span class="mini-label">TACOESPAÑOL</span><h2>Маленькі кроки,<br>великі розмови.</h2><p>Матеріали, створені, щоб урок іспанської було трохи легше підготувати й набагато приємніше проводити.</p></div>
+    </section>
+  </main>
+
+  <div class="toast" id="toast"></div>
+  <script src="app.js"></script>
+</body>
+</html>
