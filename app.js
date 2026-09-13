@@ -29,7 +29,7 @@ function render(){
 document.querySelectorAll(".filter").forEach(b=>b.addEventListener("click",()=>{
  document.querySelectorAll(".filter").forEach(x=>x.classList.remove("active"));b.classList.add("active");current=b.dataset.filter;render();
 }));
-function addCart(name){cart++;document.getElementById("cartCount").textContent=cart;showToast(`«${name}» додано до кошика`)}
+function addCart(name){cart.push(name);document.getElementById("cartCount").textContent=cart.length;showToast(`«${name}» додано до кошика`)}
 function fav(btn){btn.textContent=btn.textContent==="♡"?"♥":"♡"}
 function showToast(t){toast.textContent=t;toast.classList.add("show");setTimeout(()=>toast.classList.remove("show"),1800)}
 function showFree(){showToast("Тут будуть твої перші безкоштовні матеріали 💜")}
