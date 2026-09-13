@@ -8,7 +8,7 @@ const materials=[
  {title:"Historias en pasado",level:"A2",topic:"Говоріння",price:4.90,img:"routine.jpg"},
  {title:"Viajar por España",level:"B1",topic:"Подорожі",price:6.90,img:"travel.jpg"}
 ];
-let current="all",cart=0;
+let current="all",cart=[];
 const products=document.getElementById("products"), toast=document.getElementById("toast");
 function render(){
  const list=materials.filter(m=>current==="all"||m.level===current||m.topic===current);
