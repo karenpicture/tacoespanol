@@ -1065,3 +1065,115 @@ video{
   line-height:1;
   cursor:pointer;
 }
+.checkout-modal{
+  position:fixed;
+  inset:0;
+  z-index:110;
+  display:none;
+}
+
+.checkout-modal.show{
+  display:block;
+}
+
+.checkout-overlay{
+  position:absolute;
+  inset:0;
+  background:rgba(20,39,70,.45);
+  backdrop-filter:blur(4px);
+}
+
+.checkout-panel{
+  position:absolute;
+  top:0;
+  right:0;
+  width:min(430px,100%);
+  height:100%;
+  background:white;
+  padding:35px 28px;
+  box-shadow:-10px 0 30px rgba(20,39,70,.15);
+  overflow-y:auto;
+}
+
+.checkout-close{
+  position:absolute;
+  top:18px;
+  right:20px;
+  width:40px;
+  height:40px;
+  border:0;
+  border-radius:50%;
+  background:var(--lav);
+  color:var(--navy);
+  font-size:28px;
+  cursor:pointer;
+}
+
+.checkout-panel h2{
+  font:700 32px/1.1 "Playfair Display",Georgia,serif;
+  margin:20px 45px 10px 0;
+  color:var(--navy);
+}
+
+.checkout-note{
+  color:#68778b;
+  line-height:1.5;
+  margin:0 0 25px;
+}
+
+.checkout-panel label{
+  display:block;
+  margin-bottom:17px;
+  font-size:13px;
+  font-weight:700;
+}
+
+.checkout-panel input{
+  display:block;
+  width:100%;
+  margin-top:7px;
+  padding:13px 14px;
+  border:1px solid var(--line);
+  border-radius:12px;
+  font:inherit;
+  color:var(--navy);
+  outline:none;
+}
+
+.checkout-panel input:focus{
+  border-color:#aa72ee;
+}
+
+.checkout-summary{
+  margin-top:25px;
+  padding:20px;
+  background:#f7f4ff;
+  border-radius:18px;
+}
+
+.checkout-summary h3{
+  margin:0 0 10px;
+  font-size:16px;
+}
+
+.checkout-total{
+  display:flex;
+  justify-content:space-between;
+  margin-top:15px;
+  padding-top:15px;
+  border-top:1px solid var(--line);
+  font-size:17px;
+}
+
+.checkout-submit{
+  width:100%;
+  margin-top:20px;
+  padding:14px;
+  border:0;
+  border-radius:25px;
+  background:var(--purple);
+  color:white;
+  font-weight:700;
+  font-size:15px;
+  cursor:pointer;
+}
