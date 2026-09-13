@@ -956,3 +956,81 @@ video{
     width:100%;
   }
 }
+.cart-modal{
+  position:fixed;
+  inset:0;
+  z-index:100;
+  display:none;
+}
+
+.cart-modal.show{
+  display:block;
+}
+
+.cart-overlay{
+  position:absolute;
+  inset:0;
+  background:rgba(20,39,70,.45);
+  backdrop-filter:blur(4px);
+}
+
+.cart-panel{
+  position:absolute;
+  top:0;
+  right:0;
+  width:min(430px,100%);
+  height:100%;
+  background:white;
+  padding:35px 28px;
+  box-shadow:-10px 0 30px rgba(20,39,70,.15);
+  overflow-y:auto;
+}
+
+.cart-close{
+  position:absolute;
+  top:18px;
+  right:20px;
+  width:40px;
+  height:40px;
+  border:0;
+  border-radius:50%;
+  background:var(--lav);
+  color:var(--navy);
+  font-size:28px;
+  cursor:pointer;
+}
+
+.cart-panel h2{
+  font:700 32px/1.1 "Playfair Display",Georgia,serif;
+  margin:20px 45px 30px 0;
+  color:var(--navy);
+}
+
+.cart-empty{
+  padding:35px 15px;
+  text-align:center;
+  color:#68778b;
+}
+
+.cart-total{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-top:25px;
+  padding-top:20px;
+  border-top:1px solid var(--line);
+  font-size:18px;
+}
+
+.cart-checkout{
+  width:100%;
+  margin-top:20px;
+  padding:14px;
+  border:0;
+  border-radius:25px;
+  background:var(--purple);
+  color:white;
+  font-weight:700;
+  font-size:15px;
+  cursor:pointer;
+}
