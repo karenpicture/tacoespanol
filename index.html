@@ -81,6 +81,32 @@
   </main>
 
   <div class="toast" id="toast"></div>
-  <script src="app.js"></script>
+
+<div class="cart-modal" id="cartModal">
+  <div class="cart-overlay" onclick="closeCart()"></div>
+
+  <div class="cart-panel">
+    <button class="cart-close" onclick="closeCart()">×</button>
+
+    <h2>Твій кошик 🛒</h2>
+
+    <div id="cartItems"></div>
+
+    <div class="cart-empty" id="cartEmpty">
+      Тут поки порожньо 💜
+    </div>
+
+    <div class="cart-total">
+      <span>Разом:</span>
+      <strong id="cartTotal">$0.00</strong>
+    </div>
+
+    <button class="cart-checkout" onclick="checkout()">
+      Оформити замовлення →
+    </button>
+  </div>
+</div>
+
+<script src="app.js"></script>
 </body>
 </html>
