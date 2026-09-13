@@ -52,12 +52,16 @@ function renderCart(){
 
   empty.style.display="none";
 
-  items.innerHTML=cart.map((name,i)=>`
+  items.innerHTML=cart.map((name,i)=>{
+  const material=materials.find(m=>m.title===name);
+  return `
     <div class="cart-item">
       <span>${name}</span>
+      <strong>$${material.price.toFixed(2)}</strong>
       <button onclick="removeCart(${i})">×</button>
     </div>
-  `).join("");
+  `;
+}).join("");
 
   const total=cart.reduce((sum,name)=>{
     const material=materials.find(m=>m.title===name);
