@@ -36,4 +36,7 @@ function showFree(){showToast("Тут будуть твої перші безк�
 function openCart(){
   document.getElementById("cartModal").classList.add("show");
 }
+function closeCart(){
+  document.getElementById("cartModal").classList.remove("show");
+}
 render();
