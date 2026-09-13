@@ -939,3 +939,20 @@ svg,
 video{
   max-width:100%;
 }
+
+@media (max-width:700px){
+  .hero-grid,
+  .filters-wrap .container,
+  .popular .container,
+  .free-section .container,
+  .about .container{
+    width:calc(100% - 44px);
+    margin-left:22px;
+    margin-right:22px;
+  }
+
+  .hero-copy,
+  .hero-art{
+    width:100%;
+  }
+}
