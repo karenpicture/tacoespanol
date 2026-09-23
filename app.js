@@ -1,5 +1,6 @@
 const materials=[
- {title:"Taco En el aeropuerto",level:"A1",topic:"Лексика",price:4.90,img:"airport.jpg"}
+ {title:"Taco En el aeropuerto",level:"A1",topic:"Лексика",price:4.90,img:"airport.jpg"},
+ {title:"Taco Ropa gratis",level:"A1",topic:"Лексика",price:0,img:"ropa-gratis.png",free:true,file:"taco-ropa-gratis.html"}
 ];
 let current="all",cart=[];
 const products=document.getElementById("products"), toast=document.getElementById("toast");
@@ -7,11 +8,11 @@ function render(){
  const list=materials.filter(m=>current==="all"||m.level===current||m.topic===current);
  products.innerHTML=list.map((m,i)=>`
  <article class="product">
-   <div class="product-cover"><img src="assets/${m.img}" alt="${m.title}"><button class="heart" onclick="fav(this)">♡</button></div>
+  <div class="product-cover"><img src="assets/${m.img}" alt="${m.title}">${m.coverTitle?`<span class="cover-title">${m.coverTitle}</span>`:""}<button class="heart" onclick="fav(this)">♡</button></div>
    <div class="product-body">
     <h3>${m.title}</h3>
     <div class="tags"><span class="tag">${m.level}</span><span class="tag topic">${m.topic}</span></div>
-    <div class="product-foot"><div class="price">$${m.price.toFixed(2)}</div><button class="add" onclick="addCart('${m.title}')">Додати в кошик</button></div>
+    <div class="product-foot"><div class="price">${m.free?"Безкоштовно":"$"+m.price.toFixed(2)}</div>${m.free?`<a class="add free-download" href="assets/${m.file}" download>Завантажити</a>`:`<button class="add" onclick="addCart('${m.title}')">Додати в кошик</button>`}</div>
    </div>
  </article>`).join("");
 }
@@ -21,7 +22,12 @@ document.querySelectorAll(".filter").forEach(b=>b.addEventListener("click",()=>{
 function addCart(name){cart.push(name);document.getElementById("cartCount").textContent=cart.length;renderCart();showToast(`«${name}» додано до кошика`)}
 function fav(btn){btn.textContent=btn.textContent==="♡"?"♥":"♡"}
 function showToast(t){toast.textContent=t;toast.classList.add("show");setTimeout(()=>toast.classList.remove("show"),1800)}
-function showFree(){showToast("Тут будуть твої перші безкоштовні матеріали 💜")}
+function showFree(){
+  document.getElementById("freeModal").classList.add("show");
+}
+function closeFree(){
+  document.getElementById("freeModal").classList.remove("show");
+}
 function openCart(){
   document.getElementById("cartModal").classList.add("show");
 }
