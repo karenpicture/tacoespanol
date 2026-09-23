@@ -1,6 +1,6 @@
 const materials=[
  {title:"Taco En el aeropuerto",level:"A1",topic:"Лексика",price:4.90,img:"airport.jpg"},
- {title:"Taco Ropa gratis",level:"A1",topic:"Лексика",price:0,img:"ropa-gratis.png",free:true,file:"ropa-gratis.png"}
+ {title:"Taco Ropa gratis",level:"A1",topic:"Лексика",price:0,img:"ropa-gratis.png",free:true,file:"taco-ropa-gratis.pdf"}
 ];
 let current="all",cart=[];
 const products=document.getElementById("products"), toast=document.getElementById("toast");
